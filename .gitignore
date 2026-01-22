@@ -1,0 +1,47 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# PyCharm settings
+.idea/
+
+# Test reports and logs
+reports/
+*.log
+*.html
+*.xml
+
+# pytest
+.cache/
+.pytest_cache/
+
+# Environment files
+.env
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MacOS / Windows files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# mypy / pylint / etc
+.mypy_cache/
+.dmypy.json
+.pyre/
+/test.egg-info/

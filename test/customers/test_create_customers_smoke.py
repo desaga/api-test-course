@@ -40,7 +40,6 @@ def test_create_customer_with_existed_email():
     payload = build_create_customer_payload(test_data)
     c_client = CustomersClient()
     response = c_client.create_customer(payload)
-    pdb.set_trace()
     assert_customer_with_existed_email_not_created(response, 400)
 
 

@@ -6,7 +6,6 @@ from src.db.database import Database
 def user_exists(email):
     db = Database()
     session = db.Session()
-    # import pdb; pdb.set_trace()
 
     try:
         result = session.execute(
@@ -31,7 +30,6 @@ def get_existed_customer_email():
         )
 
         result = result.scalar()
-        # import pdb; pdb.set_trace()
         if result:
             return result
         else:

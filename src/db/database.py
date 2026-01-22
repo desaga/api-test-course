@@ -32,7 +32,6 @@ if __name__ == '__main__':
         session = db.get_session()
         result = session.execute(text("SELECT 1"))
         import pdb
-        pdb.set_trace()
         assert result.scalar() == 1
         print("Successfully connected to database!")
     except SQLAlchemyError as e:

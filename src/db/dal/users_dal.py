@@ -5,7 +5,7 @@ from src.db.database import Database
 
 def user_exists(email):
     db = Database()
-    session = db.Session()
+    session = db.get_session()
 
     try:
         result = session.execute(
@@ -19,10 +19,12 @@ def user_exists(email):
     except Exception as e:
         print(e)
         return False
+    finally:
+        db.close_session()
 
 def get_existed_customer_email():
     db = Database()
-    session = db.Session()
+    session = db.get_session()
 
     try:
         result = session.execute(
@@ -37,3 +39,6 @@ def get_existed_customer_email():
     except Exception as e:
         print(e)
         return False
+    finally:
+        db.close_session()
+

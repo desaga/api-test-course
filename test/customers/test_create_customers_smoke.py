@@ -32,6 +32,7 @@ def test_create_customer_only_email_password():
     assert_customer_created(response, expected_status=201,
                             expected_body=test_data)
 
+
 # @pytest.mark.skip(reason="Feature not implemented yet")
 @pytest.mark.tc02
 def test_customer_has_created_in_database():

@@ -3,6 +3,7 @@
 from sqlalchemy import text
 from src.db.database import Database
 
+
 def user_exists(email):
     db = Database()
     session = db.get_session()
@@ -10,17 +11,17 @@ def user_exists(email):
     try:
         result = session.execute(
             text("SELECT 1 FROM wp_users WHERE user_email = :email"),
-            {"email":email}
+            {"email": email}
         ).scalar()
         if result:
             return True
         else:
             return False
     except Exception as e:
-        print(e)
         return False
     finally:
         db.close_session()
+
 
 def get_existed_customer_email():
     db = Database()
@@ -41,4 +42,3 @@ def get_existed_customer_email():
         return False
     finally:
         db.close_session()
-

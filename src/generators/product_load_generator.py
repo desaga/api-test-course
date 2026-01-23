@@ -1,4 +1,4 @@
-# src/generators/text_generator.py
+# src/generators/product_load_generator.py
 from lorem_text import lorem
 import random
 import json
